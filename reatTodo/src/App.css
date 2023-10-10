@@ -1,0 +1,45 @@
+/* body{
+    width: 100%;
+    left: 0;
+    background-color: rgb(216, 213, 213);
+} */
+/* #root{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+} */
+.register{
+    background-color: rgb(218, 235, 255);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.register h1{
+    font-style: italic;
+    font-size: 70px;
+    margin: 0;
+}
+.register h1 span{
+    color: rgb(255, 111, 0);
+}
+.register h6{
+    font-size: 30px;
+    margin: 0;
+}
+.register button{
+    width: 300px;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, red  , green , blue , yellow );
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
