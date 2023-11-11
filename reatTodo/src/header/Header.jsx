@@ -3,7 +3,9 @@ import find from "../../src/assets/find.png";
 import account from "../../src/assets/account.png";
 import { useState } from "react";
 import logo from "../../src/assets/why.png"
-function Header({Product_Info}){
+import basket from "../../src/assets/basket.png"
+import cancel from "../../src/assets/cancel.png"
+function Header({Product_Info, selectedData, onSelect}){
 
     const [query, setQuery] = useState("");
     console.log(query)
@@ -42,19 +44,45 @@ function Header({Product_Info}){
         setSearch(  Product_Info.filter((li)=> li.title === id))
         
     }
+    const [isDivVisible, setDivVisible] = useState(false);
+    const toggleDivDisplay = () => {
+        setDivVisible(!isDivVisible);
+      };
+    //   const cancel = () => {
+    //     setDivVisible(false);
+    //   }
     return(
+        <>
+        <div style={{ display: isDivVisible ? 'block' : 'none' }} className="addedToCart">
+            <div className="checkoutItems">
+            <h2>Selected Data</h2>
+      <div>
+        {selectedData ? (
+          <div>{onSelect.id}</div>
+        ) : (
+          <div>Select a data item to display.</div>
+        )}
+      </div>
+            </div>
+            <img src={cancel} id="cancelCart" onClick={toggleDivDisplay}/>
+            <button id="checkout">CHECKOUT</button>
+        </div>
         <div className="head">
             {/* <h2><i>Seller Shop</i></h2> */}
             <img className="logo" src={logo}/>
             <div className="Searcher">
-            <input  className="search" type="text" name="search" placeholder="Search for items" 
-            value={query} onChange={(e)=>setQuery(e.target.value)}/>
-            <img src={find} alt="find" className="find" type="submit"/>
+                <input  className="search" type="text" name="search" placeholder="Search for items" 
+                value={query} onChange={(e)=>setQuery(e.target.value)}/>
+                <img src={find} alt="find" className="find" type="submit"/>
+            </div>
+            <div className="basket">
+                <img src={basket} alt="cart" onClick={toggleDivDisplay}/>
             </div>
             <div className="profile">
-            <img src={account} alt="account"/>
+                <img src={account} alt="account"/>
             </div>
         </div>
+        </>
     )
 }
 

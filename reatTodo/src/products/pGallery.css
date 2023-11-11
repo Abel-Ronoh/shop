@@ -90,3 +90,6 @@ margin:10px;
     justify-content: center;
     row-gap: 10px;
 }
+.p_cart{
+    cursor: grab;
+}
