@@ -1,4 +1,4 @@
-import './Categories.css'
+import './categories.css'
 import Oerview from "../home_page/overview";
 import Gallery from '../products/pGallery'
 import { useState } from 'react'
