@@ -22,7 +22,7 @@ function App() {
       {value?<Home/>:
       <div className='register'>
         <h1>Welcome To <span>Fresh Market</span></h1>
-        <h6>We bring your kitchen closer</h6>
+        <h6>We bring your kitchen closer.</h6>
       <button onClick={handleClick}>Sign in with Google</button>
       </div>
     }
