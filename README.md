@@ -42,3 +42,8 @@ It’s designed for speed, simplicity, and an intuitive shopping experience.
 ```bash
    npm run dev
 ```
+
+
+<img width="1594" height="764" alt="image" src="https://github.com/user-attachments/assets/0b4eedb9-a510-4d06-8bff-32096fbca6a8" />
+<img width="1586" height="772" alt="image" src="https://github.com/user-attachments/assets/e8237890-7cb3-48be-b634-ad2a939364c7" />
+
